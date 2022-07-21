@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryNetworkTests</name>
+    </assembly>
+    <members>
+        <member name="T:LibraryNetworkTests.LibraryNetworkTests">
+            <summary>
+            Класс который тестирует класс библиотеки.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.SetUp">
+            <summary>
+            Метот автоустановки значения перед каждым тестом.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_AddInCatalog_input_book_result_LibraryItemAddBook">
+            <summary>
+            Тестирование метода добавления в каталог.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_RemoveFromCatalog_input_book_result_LibraryItemRemoveBook">
+            <summary>
+            Тестирование метода удаления из каталога.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_GetAll_Return_LibraryItemsArray">
+            <summary>
+            Тестирование метода получить все объекты из каталога библиотеки.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_Search_Return_LibraryItemsArray_When_Not_Null">
+            <summary>
+            Тестирование метода поиска , критерием выбрано имя, при условии что есть хотябы 1 объект.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_Search_Return_LibraryItemsArray_When_Null">
+            <summary>
+            Тестирование метода поиска , критерием выбрано имя, при условии что нет не 1 объекта в списке.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_SearchAuthor_Return_LibraryItemsArray_When_Not_Null">
+            <summary>
+            Тестирование метода поиска по автору, при условии что список не пустой.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_SearchAuthor_Return_LibraryItemsArray_When_Null">
+            <summary>
+            Тестирование метода поиска по автору, при условии что список пустой.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_SortUpYearPublishing_Return_LibraryItemsArray">
+            <summary>
+            Тестирование метода сортировки по году побликации от меньшего к большему.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_SortDownYearPublishing_Return_LibraryItemsArray">
+            <summary>
+            Тестирование метода сортировки по году побликации от большего к меньшему.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_PrintBooksPublishingName_Return_LibraryItemsArray">
+            <summary>
+            Тестирование метода вывод всех книг сгруппированных по названию издательства.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_PrintBooksPublishingName_Return_LibraryItemsArray_Null">
+            <summary>
+            Тестирование метода вывод всех книг сгруппированных по названию издательства переданный список пуст.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_GroupByYearPublishing_Return_LibraryItemsArray">
+            <summary>
+            Тестирование метода, группировка всех объектов библиотеки по году издательства.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestMethod_PrintBooksPublishingName_input_IsIt_Null_Return_Null">
+            <summary>
+            Тестирование метода, группировка всех объектов библиотеки по году издательства, когда список пуст.
+            </summary>
+        </member>
+        <member name="M:LibraryNetworkTests.LibraryNetworkTests.TestUniqueId">
+            <summary>
+            Тестирование метода, группировка всех объектов библиотеки по году издательства.
+            </summary>
+        </member>
+    </members>
+</doc>

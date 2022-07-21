@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryNetwork</name>
+    </assembly>
+    <members>
+        <member name="T:LibraryNetwork.Interface.IDBContext">
+            <summary>
+            Контекст БД.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Interface.IDBContext.GetAllDate">
+            <summary>
+            Получить все данные из контекста БД.
+            </summary>
+            <returns>Массив данных.</returns>
+        </member>
+        <member name="T:LibraryNetwork.Models.Book">
+            <summary>
+            Книга.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.Book.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.Book"/> class.
+            Инициализатор книги и ключа изпользуемого для группировки.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Book.Authors">
+            <summary>
+            Gets or sets авторы.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Book.PlacePublication">
+            <summary>
+            Gets or sets место издания(Город).
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Book.PublicationName">
+            <summary>
+            Gets or sets название издательства.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Book.NumberPages">
+            <summary>
+            Gets or sets количество страниц.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Book.ISBN">
+            <summary>
+            Gets or sets международный стандартный номер серийного издания.
+            </summary>
+        </member>
+        <member name="T:LibraryNetwork.Models.LibraryItemComparerDownYearPublishing">
+            <summary>
+            Сравнивающий элементы сравниватель, для Array.Sort() по убыванию.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.LibraryItemComparerDownYearPublishing.Compare(LibraryNetwork.Models.LibraryItem,LibraryNetwork.Models.LibraryItem)">
+            <summary>
+            Базовый метод сравнения для сортировки по убыванию.
+            </summary>
+            <param name="item1">Предмет из библиотеки сравниваемый.</param>
+            <param name="item2">Предмет из библиотеки с чем сравнивают.</param>
+            <returns>Значение сравнения между 2 предметами.</returns>
+        </member>
+        <member name="T:LibraryNetwork.Models.LibraryItemComparerPublishingName">
+            <summary>
+            Сравнивающий элементы сравниватель, для Array.Sort() для массива LibraryItem но только для книг .
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.LibraryItemComparerPublishingName.Compare(LibraryNetwork.Models.LibraryItem,LibraryNetwork.Models.LibraryItem)">
+            <summary>
+            Базовый метод сравнения для сортировки по убыванию.
+            </summary>
+            <param name="item1">Книга сравниваемый.</param>
+            <param name="item2">Книга с которой сравнивают.</param>
+            <returns>Значение сравнения между 2 предметами.</returns>
+        </member>
+        <member name="T:LibraryNetwork.Models.LibraryItemComparerUpYearPublishing">
+            <summary>
+            Сравнивающий элементы сравниватель, для Array.Sort() по возрастанию.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.LibraryItemComparerUpYearPublishing.Compare(LibraryNetwork.Models.LibraryItem,LibraryNetwork.Models.LibraryItem)">
+            <summary>
+            Базовый метод сравнения для сортировки по возрастанию.
+            </summary>
+            <param name="item1">Предмет из библиотеки сравниваемый.</param>
+            <param name="item2">Предмет из библиотеки с чем сравнивают.</param>
+            <returns>Значение сравнения между 2 предметами.</returns>
+        </member>
+        <member name="T:LibraryNetwork.Models.LibraryItem">
+            <summary>
+            Любая вещь библиотеки, будь то книга, патент или газета, которую можно взять.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.LibraryItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.LibraryItem"/> class.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.LibraryItem.Id">
+            <summary>
+            Gets or sets идентификатор.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.LibraryItem.Name">
+            <summary>
+            Gets or sets название.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.LibraryItem.Note">
+            <summary>
+            Gets or sets примечание.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.LibraryItem.YearPublishing">
+            <summary>
+            Gets or sets год издании.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.LibraryItem.Key">
+            <summary>
+            Gets or sets ключ используемый при группировке.
+            </summary>
+        </member>
+        <member name="T:LibraryNetwork.Models.Newspaper">
+            <summary>
+            Газета.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.Newspaper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.Newspaper"/> class.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.PlacePublication">
+            <summary>
+            Gets or sets место издания(Город).
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.PublicationName">
+            <summary>
+            Gets or sets название издательства.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.NumberPages">
+            <summary>
+            Gets or sets количество страниц.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.Number">
+            <summary>
+            Gets or sets номер.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.Date">
+            <summary>
+            Gets or sets дата.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Newspaper.ISSN">
+            <summary>
+            Gets or sets международный стандартный номер серийного издания.
+            </summary>
+        </member>
+        <member name="T:LibraryNetwork.Models.Patent">
+            <summary>
+            Патент.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.Patent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.Patent"/> class.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Patent.Inventors">
+            <summary>
+            Gets or sets изобретатели.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Patent.Country">
+            <summary>
+            Gets or sets страна.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Patent.RegistrationNumber">
+            <summary>
+            Gets or sets регистрационный номер.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Patent.ApplicationDate">
+            <summary>
+            Gets or sets дата подачи заявки.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.Patent.NumberPages">
+            <summary>
+            Gets or sets количество страниц.
+            </summary>
+        </member>
+        <member name="T:LibraryNetwork.Models.CatalogSerivice">
+            <summary>
+            Каталог всех вещей в библиотеке.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.#ctor(LibraryNetwork.Interface.IDBContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.CatalogSerivice"/> class.
+            </summary>
+            <param name="dbContext">База данных объектов передаваемая из любого класса реализующего интерфейс.</param>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LibraryNetwork.Models.CatalogSerivice"/> class.
+            </summary>
+        </member>
+        <member name="P:LibraryNetwork.Models.CatalogSerivice.ListItems">
+            <summary>
+            Gets or sets полный список всех элементов каталога.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.Add(LibraryNetwork.Models.LibraryItem)">
+            <summary>
+            Добавить в список вещей библиотеки новую вещь.
+            </summary>
+            <param name="libraryItem">Вещь.</param>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.Remove(LibraryNetwork.Models.LibraryItem)">
+            <summary>
+            Удалить вещь из списка библиотеки. Поиск будет происзводится по полному названию и первая вещь в списке с таким названием будет удалена.
+            </summary>
+            <param name="libraryItem">Вещь.</param>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.GetAll">
+            <summary>
+            Вывод всех вещей находящихся в библиотеке.
+            </summary>
+            <returns>Список всех вещей.</returns>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.Search(System.String)">
+            <summary>
+            Осуществляет поиск по части названия.
+            </summary>
+            <param name="name">Название объекта.</param>
+            <returns>Список всех вещей с похожим именем.</returns>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.SortUpYearPublishing">
+            <summary>
+            Сортировка объектов по году издания от меньшего к большему.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.SortDownYearPublishing">
+            <summary>
+            Сортировка объектов по году издания от большего к меньшему.
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.SearchAuthor(System.String)">
+            <summary>
+            Поиск среди книг по автору.
+            </summary>
+            <param name="author">Автор.</param>
+            <returns>Список всех вещей с заданным автором.</returns>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.PrintBooksPublishingName(System.String)">
+            <summary>
+            Вывод всех книг, название издательства которых начинается с заданного набора символов, с
+            группировкой по издательству.
+            </summary>
+            <param name="publishingName">Название издательства.</param>
+            <returns>Список всех книг которые были опубликованы издательствами, в которые содержится заданная строк, сгруппированные по издательству.</returns>
+        </member>
+        <member name="M:LibraryNetwork.Models.CatalogSerivice.GroupByYearPublishing">
+            <summary>
+            Группировка всех объектов библиотеки по году издательства.
+            </summary>
+            <returns>Список всех вещей сгруппированных по году издательства.</returns>
+        </member>
+        <member name="T:LibraryNetwork.Services.DBContextArray">
+            <summary>
+            БД размещенное в массиве.
+            </summary>
+        </member>
+        <member name="F:LibraryNetwork.Services.DBContextArray.catalog">
+            <summary>
+            Каталог данных размещенный в массиве сущностей библиотеки..
+            </summary>
+        </member>
+        <member name="M:LibraryNetwork.Services.DBContextArray.GetAllDate">
+            <summary>
+            Получить все данные.
+            </summary>
+            <returns>Вертуть бд в дальнейшее использовани.</returns>
+        </member>
+    </members>
+</doc>
